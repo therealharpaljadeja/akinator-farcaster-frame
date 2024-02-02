@@ -4,7 +4,7 @@ export const runtime = "experimental-edge";
 
 export async function GET(request: Request) {
     const schoolBell = await fetch(
-        new URL("../../public/SchoolBell-regular.ttf", import.meta.url)
+        new URL("../../public/Schoolbell-regular.ttf", import.meta.url)
     ).then((res) => res.arrayBuffer());
 
     const { searchParams } = new URL(request.url);
