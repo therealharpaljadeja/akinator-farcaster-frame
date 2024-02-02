@@ -34,7 +34,9 @@ export async function POST(req: NextRequest): Promise<Response> {
         return new NextResponse(ErrorResponse);
     }
 
-    const hasUserFollowedMe = userInformation?.viewerContext?.following;
+    const hasUserFollowedMe =
+        userInformation?.result?.user?.viewerContext?.following;
+
     console.log(fid, hasUserFollowedMe);
 
     if (!hasUserFollowedMe) {
