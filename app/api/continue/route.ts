@@ -35,6 +35,8 @@ export async function POST(req: NextRequest): Promise<Response> {
     const tappedButton = status?.action?.tapped_button.index;
     const { fid, username } = status?.action?.interactor;
 
+    console.log(fid);
+
     if (tappedButton === 1) {
         // Win
 

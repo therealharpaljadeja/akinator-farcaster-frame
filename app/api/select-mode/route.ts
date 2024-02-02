@@ -25,9 +25,15 @@ export async function POST(req: NextRequest): Promise<Response> {
         return new NextResponse(ErrorResponse);
     }
 
+    console.log(status);
+
     let { fid, username } = status?.action?.interactor;
 
+    console.log(fid);
+
     const userInformation = await getUserInformation(fid);
+
+    console.log(userInformation);
 
     if (!userInformation) {
         console.error("userInformation", userInformation);
