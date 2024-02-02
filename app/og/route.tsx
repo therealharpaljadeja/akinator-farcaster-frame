@@ -3,10 +3,8 @@ import { ImageResponse } from "next/og";
 export const runtime = "experimental-edge";
 
 export async function GET(request: Request) {
-    console.log(import.meta.url);
-
     const schoolBell = await fetch(
-        new URL("./Schoolbell-Regular.ttf", import.meta.url)
+        new URL("/public/assets/Schoolbell-Regular.ttf", import.meta.url)
     ).then((res) => res.arrayBuffer());
 
     const { searchParams } = new URL(request.url);
