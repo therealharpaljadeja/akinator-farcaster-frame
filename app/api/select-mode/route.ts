@@ -6,8 +6,8 @@ const ErrorResponse = `
     <html>
         <head>
             <meta property="fc:frame" content="vNext" />
-            <meta property="fc:frame:image" content="https://i.ibb.co/30kw1vW/Start-Frame-1.png" />
-            <meta property="og:image" content="https://i.ibb.co/30kw1vW/Start-Frame-1.png" />
+            <meta property="fc:frame:image" content="${process.env.HOST}/assets/images/select-theme.png" />
+            <meta property="og:image" content="${process.env.HOST}/assets/images/select-theme.png" />
             <meta property="fc:frame:button:1" content="Try Again" />
             <meta property="fc:frame:post_url" content="${process.env["HOST"]}/api/select-mode" />
         </head>
@@ -45,8 +45,8 @@ export async function POST(req: NextRequest): Promise<Response> {
         <html>
             <head>
                 <meta property="fc:frame" content="vNext" />
-                <meta property="fc:frame:image" content="https://i.ibb.co/dDHSDjN/Start-Frame-5.png" />
-                <meta property="og:image" content="https://i.ibb.co/dDHSDjN/Start-Frame-5.png" />
+                <meta property="fc:frame:image" content="${process.env.HOST}/assets/images/follow.png" />
+                <meta property="og:image" content="${process.env.HOST}/assets/images/follow.png" />
                 <meta property="fc:frame:button:1" content="Try Again" />
                 <meta property="fc:frame:post_url" content="${process.env["HOST"]}/api/select-mode" />
             </head>
@@ -59,8 +59,8 @@ export async function POST(req: NextRequest): Promise<Response> {
     <html>
         <head>
             <meta property="fc:frame" content="vNext" />
-            <meta property="fc:frame:image" content="https://i.ibb.co/30kw1vW/Start-Frame-1.png" />
-            <meta property="og:image" content="https://i.ibb.co/30kw1vW/Start-Frame-1.png" />
+            <meta property="fc:frame:image" content="${process.env.HOST}/assets/images/select-theme.png" />
+            <meta property="og:image" content="${process.env.HOST}/assets/images/select-theme.png" />
             <meta property="fc:frame:button:1" content="🕴️ Characters" />
             <meta property="fc:frame:button:2" content="📺 Objects" />
             <meta property="fc:frame:button:3" content="🦁 Animals" />

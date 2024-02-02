@@ -8,12 +8,12 @@ export async function generateMetadata(): Promise<Metadata> {
         description: "Mind reading game on Farcaster, follow @harpaljadeja",
         openGraph: {
             title: "Mind Reader Farcaster Frame",
-            images: ["https://i.ibb.co/hF6rjk0/Start-Frame.png"],
+            images: [`${process.env.HOST}/assets/images/first.png`],
         },
         metadataBase: new URL(process.env["HOST"] as string),
         other: {
             "fc:frame": "vNext",
-            "fc:frame:image": "https://i.ibb.co/hF6rjk0/Start-Frame.png",
+            "fc:frame:image": `${process.env.HOST}/assets/images/first.png`,
             "fc:frame:post_url": `${process.env.HOST}/api/select-mode`,
             "fc:frame:button:1": "Start",
         },
