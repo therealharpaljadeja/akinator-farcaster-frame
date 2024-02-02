@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Link from "next/link";
 
 export const dynamic = "force-dynamic";
 
@@ -25,9 +24,6 @@ export default function Home() {
     return (
         <main className="flex min-h-screen flex-col items-center space-y-4 p-24">
             <h2>Farcaster Frame that can read your mind</h2>
-            <Link href="https://lu.ma/v6iz9u0j">
-                <h3 className="underline">Play here</h3>
-            </Link>
         </main>
     );
 }

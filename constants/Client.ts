@@ -2,6 +2,7 @@ export const patternSession = new RegExp(
     "var uid_ext_session = '(.*)';\\n.*var frontaddr = '(.*)';"
 );
 
+// Credit to this guy
 export const issues = "https://github.com/jgoralcz/aki-api/issues";
 
 export const jQuery = "jQuery331023608747682107778_";

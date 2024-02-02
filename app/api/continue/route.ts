@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { validateFrameRequest } from "@/utils";
-import Akinator, { AkinatorConstructor, answers } from "@/Akinator";
+import Akinator, { AkinatorConstructor } from "@/Akinator";
 import { Redis } from "@upstash/redis";
 
 const redis = new Redis({
