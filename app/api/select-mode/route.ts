@@ -27,38 +27,34 @@ export async function POST(req: NextRequest): Promise<Response> {
 
     console.log(status);
 
-    let { fid, username } = status?.action?.interactor;
+    // const userInformation = await getUserInformation(fid);
 
-    console.log(fid);
+    // console.log(userInformation);
 
-    const userInformation = await getUserInformation(fid);
+    // if (!userInformation) {
+    //     console.error("userInformation", userInformation);
+    //     return new NextResponse(ErrorResponse);
+    // }
 
-    console.log(userInformation);
+    // const hasUserFollowedMe =
+    //     userInformation?.result?.user?.viewerContext?.following;
 
-    if (!userInformation) {
-        console.error("userInformation", userInformation);
-        return new NextResponse(ErrorResponse);
-    }
+    // console.log(fid, hasUserFollowedMe);
 
-    const hasUserFollowedMe =
-        userInformation?.result?.user?.viewerContext?.following;
-
-    console.log(fid, hasUserFollowedMe);
-
-    if (!hasUserFollowedMe) {
-        return new NextResponse(`
-        <!DOCTYPE html>
-        <html>
-            <head>
-                <meta property="fc:frame" content="vNext" />
-                <meta property="fc:frame:image" content="${process.env.HOST}/assets/images/follow.png" />
-                <meta property="og:image" content="${process.env.HOST}/assets/images/follow.png" />
-                <meta property="fc:frame:button:1" content="Try Again" />
-                <meta property="fc:frame:post_url" content="${process.env["HOST"]}/api/select-mode" />
-            </head>
-        </html>
-        `);
-    }
+    // if (!hasUserFollowedMe) {
+    //     return new NextResponse(`
+    //     <!DOCTYPE html>
+    //     <html>
+    //         <head>
+    //             <meta property="fc:frame" content="vNext" />
+    //             <meta property="fc:frame:image" content="${process.env.HOST}/assets/images/follow.png" />
+    //             <meta property="og:image" content="${process.env.HOST}/assets/images/follow.png" />
+    //             <meta property="fc:frame:button:1" content="Try Again" />
+    //             <meta property="fc:frame:post_url" content="${process.env["HOST"]}/api/select-mode" />
+    //         </head>
+    //     </html>
+    //     `);
+    // }
 
     return new NextResponse(`
     <!DOCTYPE html>
